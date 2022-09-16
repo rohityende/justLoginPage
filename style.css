@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", "sans-serif";
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(220, 47, 214), rgb(255, 255, 255));
+}
+
+section::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 0%;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+section .color {
+  position: absolute;
+  filter: blur(150px);
+  animation: animation-2 4s linear infinite;
+}
+
+section .color:nth-child(1) {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #ff359b;
+  top: -350px;
+  animation-delay: 1s;
+}
+section .color:nth-child(2) {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #35ebff;
+  bottom: 0px;
+  left: 100px;
+  animation-delay: 2s;
+}
+section .color:nth-child(3) {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  background: #a4ff35;
+  right: 50px;
+  bottom: 70px;
+  animation-delay: 3s;
+}
+section .color:nth-child(4) {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #5035ff;
+  right: 650px;
+  bottom: 250px;
+  animation-delay: 4s;
+}
+
+@keyframes animation-2 {
+    0%, 100% {
+      transform: translateX(-200px);
+      transform: scale(20% 20%);
+      
+    }
+  
+    50% {
+      transform: translateX(200px);
+      transform: scale(0 0);
+    }
+  }
+
+  /* @keyframes color-change {
+    0%, 100%{
+        background-color: #ff359b;;
+    }
+
+    50%{
+        background-color: blue
+    }
+    
+  } */
+
+.box {
+  z-index: 1;
+  position: relative;
+}
+
+.box .square {
+  position: absolute;
+  background: rgb(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 10px;
+  animation: animation 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+
+.box .square:nth-child(1) {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 200px;
+  right: -250px;
+  backdrop-filter: blur(3px);
+}
+
+.box .square:nth-child(2) {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -70px;
+  left: -230px;
+}
+
+.box .square:nth-child(3) {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: -10px;
+  right: -30px;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+}
+
+.box .square:nth-child(4) {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  bottom: -100px;
+  left: -100px;
+}
+
+.box .square:nth-child(5) {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -80px;
+  right: -50px;
+}
+
+.box .square:nth-child(6) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  right: 200px;
+  animation-delay: 1s;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    transform: translateY(-50px);
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.form h2 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form h2::before {
+  content: " ";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.form .inputfield {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form .inputfield input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.1);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.form .inputfield input::placeholder {
+  color: #fff;
+}
+
+.form .inputfield input[type="submit"] {
+  background: #fff;
+  font-weight: 600;
+  color: #666;
+  max-width: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.last-links {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.last-links a {
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
